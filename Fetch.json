@@ -1,0 +1,16 @@
+const url = 'https://www.dimerc.cl/aseo'
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+
+    let element = document.getElementById('elem')
+    element.innerHTML =
+        <p>${data.name}</p>
+        <p>${data.order}</p>
+        
+        ;
+        
+    console.log(data)
+})
+.catch(err=>console.log(err))
